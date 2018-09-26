@@ -1,0 +1,172 @@
+:root {
+    --header-border-color: rgb(194, 194, 194); 
+}
+
+
+body {
+	background: rgb(224, 234, 249); /*todo: replace this*/
+	background: url(../images/wooden.jpg) center;
+	background-size: 100% auto; /*100% x-axis (stretch), auto on y axis (tile)*/
+}
+
+header {
+	padding: 0 10%;
+	background: rgb(255, 255, 255);
+	position: relative;
+	border-bottom: 1px solid var(--header-border-color);
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+}
+
+a {
+	text-decoration: none;
+	color: rgb(142, 142, 142);
+}
+
+main {
+	background: rgb(255, 255, 255);
+	margin: 15% 10%;
+	padding: 3%;
+	font-size: .75rem;
+}
+
+h1 {
+	font-size: 1.5rem;
+	color: rgb(74, 170, 165);
+}
+
+#bio-pic {
+	margin: 0rem .5rem .5rem 0rem;
+}
+
+.logo {
+	color: rgb(255, 255, 255);
+	background: rgb(74, 170, 165);
+	min-width: 20%;
+	padding: 3% 2%;
+	text-align: center;
+	font-size: 1.3rem;
+	white-space: nowrap;
+}
+
+.flex-container {
+	display: flex;
+}
+.flex-space-between {
+	justify-content: space-between;
+	position: relative;
+}
+
+.float-left {
+	float: left;
+}
+
+.navigation-links {
+	padding-top: 3.67%;
+	font-size: 1rem;
+}
+
+.link-separator {
+	color: rgba(142, 142, 142, .5);
+	padding: 0px .13rem;
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 576px) {
+	.link-separator {
+		padding: 0px 1.2rem;
+	}
+	.logo {
+		font-size: 1.45rem;
+	}
+	.navigation-links {
+		padding-top: 3.67%;
+		font-size: 1.1rem;
+	}
+	h1 {
+		font-size: 1.75rem;
+	}
+	#bio-pic {
+		margin: 0rem .75rem .75rem 0rem;
+	}
+	main {
+		font-size: 1rem;
+	}
+} 
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+	header {
+		border-bottom: 2px solid var(--header-border-color);
+	}
+	.link-separator {
+		padding: 0px 2rem;
+	}
+	.logo {
+		font-size: 1.6rem;
+	}
+	.navigation-links {
+		padding-top: 3.67%;
+		font-size: 1.2rem;
+	}
+	h1 {
+		font-size: 2rem;
+	}
+	#bio-pic {
+		margin: 0rem 1rem 1rem 0rem;
+	}
+	main {
+		font-size: 1.125rem;
+	}
+} 
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+	.link-separator {
+		padding: 0px 2.5rem;
+	}
+	.logo {
+		font-size: 1.8rem;
+	}
+	.navigation-links {
+		padding-top: 3.67%;
+		font-size: 1.3rem;
+	}
+	h1 {
+		font-size: 2.25rem;
+	}
+	#bio-pic {
+		margin: 0rem 1.5rem 1.5rem 0rem;
+	}
+	main {
+		font-size: 1.25rem;
+	}
+} 
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+	header {
+		border-bottom: 3px solid var(--header-border-color);
+	}
+	.link-separator {
+		padding: 0px 3rem;
+	}
+	.logo {
+		font-size: 2rem;
+	}
+	.navigation-links {
+		padding-top: 3.67%;
+		font-size: 1.4rem;
+	}
+	h1 {
+		font-size: 2.5rem;
+	}
+	#bio-pic {
+		margin: 0rem 2.25rem 2rem 0rem;
+	}
+	main {
+		font-size: 1.4rem;
+	}
+}
