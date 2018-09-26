@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Contact</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+	<link rel="shortcut icon" type="image/png" href="assets/images/personatcomputer.png"/>
+</head>
+<body>
+	<header>
+		<div class="flex-container flex-space-between">
+			<div class="logo">
+				Scott Ratigan
+			</div>
+			<div class="navigation-links">
+				<a href="index.html">About</a> <span class="link-separator">|</span>
+				<a href="portfolio.html">Portfolio</a> <span class="link-separator">|</span>
+				<a href="contact.html">Contact</a></li>
+			</div>
+		</div> 
+	</header>
+
+	<main>
+		<section>
+			<h1>Contact</h1>
+			<hr>
+			<form action="submit.php">
+            <p>
+                Name<br>
+                <input type="text" name="name" placeholder="John Smith" class="singleLineInputBox">
+            </p>
+            <p>
+                Email<br>
+                <input type="text" name="email" placeholder="example@gmail.com" class="singleLineInputBox">
+            </p>
+            <p>
+                Message<br>
+                <!-- <input type="text" name="message" class="multiLineInputBox"> -->
+                <!-- <textarea name="message" cols="40" rows="5"></textarea> -->
+                <textarea name="message" rows="5"></textarea>
+            </p>
+            <input type="submit">
+        </form>
+		</section>
+	</main>
+
+	<footer>
+		Copyright © 2018 Scott Ratigan
+	</footer>
+</body>
+</html>
