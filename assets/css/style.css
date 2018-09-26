@@ -1,0 +1,87 @@
+body {
+	background: grey;
+	background-image: url("../images/qbkls.png");
+}
+
+header {
+	height: 43px;
+	background: white;
+	margin: 0px;
+	padding: 0px;
+	padding-bottom: 30px;
+	overflow: visible;
+	border-bottom: 3px solid #dddddd;
+}
+
+footer {
+	position: fixed;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 3rem;
+	background: #666666;
+	border-top: 3px solid #4aaaa5;
+	text-align: center;
+	/*vertical-align: text-bottom;*/
+	padding-top: 1rem;
+}
+
+h1 {
+	text-indent: 2rem;
+	font-size: 2rem;
+	color: #4aaaa5;
+}
+
+p {
+	text-indent: 1rem;
+	margin: 10px;
+	padding: 10px;
+}
+
+img {
+
+}
+
+/*main {
+	margin-top: 200px;
+}*/
+
+
+main {
+	width: 900px;
+	margin: 20px auto 0px auto;
+	background: white;
+	padding: 15px;
+}
+
+.header {
+	width: 900px;
+	margin: 0 auto;
+}
+
+.aSeperator {
+	color: grey;
+	padding: 0px 1rem;
+}
+
+#nameTab {
+	color: white;
+	background: #4aaaa5;
+	float: left;
+	height: 3rem;
+	font-size: 2rem;
+	padding: 20px 10px 5px 10px;
+}
+
+#navigationLinks {
+	font-size: 1.2rem;
+	float: right;
+	margin-top: 1.5rem;
+}
+
+#bioPicture {
+	float: left;
+	padding-right: 2rem;
+	padding-bottom: 1rem;
+}
+
