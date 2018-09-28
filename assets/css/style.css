@@ -64,6 +64,10 @@ img:hover {
 	border: 2px solid var(--main-color);
 }
 
+input {
+	height: 2rem;
+}
+
 input, textarea {
 	width: 100%;
 }
@@ -76,7 +80,7 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-	color: black;
+	color: rgb(0, 0, 0);
 	background: var(--background-color);
 	border: 1px solid var(--main-color);
 }

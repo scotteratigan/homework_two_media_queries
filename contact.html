@@ -29,16 +29,16 @@
 			<hr>
 			<form action="submit.php">
             <p>
-            	<label for="name">Full Name</label>
-                <input type="text" name="name" required placeholder="John Smith" class="singleLineInputBox" pattern="\S+ \S+.*" title="Please enter your first and last name.">
+            	<label for="nameInput">Full Name</label>
+                <input type="text" name="name" id="nameInput" required placeholder="John Smith" class="singleLineInputBox" pattern="\S+ \S+.*" title="Please enter your first and last name.">
             </p>
             <p>
-                <label for="email">Email</label>
-                <input type="email" name="email" required placeholder="example@gmail.com" class="singleLineInputBox" pattern="\S+@\S+\.[a-z]{2,3}$" title="Please enter a valid email address.">
+                <label for="emailInput">Email</label>
+                <input type="email" name="email" id="emailInput" required placeholder="example@gmail.com" class="singleLineInputBox" pattern="\S+@\S+\.[a-z]{2,3}$" title="Please enter a valid email address.">
             </p>
             <p>
-                <label for="message">Message</label>
-                <textarea name="message" required rows="10" pattern=".{25,}" title="Minimum message length is 25 characters, please. Thanks!" minlength=25></textarea>
+                <label for="messageInput">Message</label>
+                <textarea name="message" id="messageInput" required rows="10" title="Minimum message length is 25 characters, please. Thanks!" minlength=25></textarea>
             </p>
             <input type="submit">
         </form>
