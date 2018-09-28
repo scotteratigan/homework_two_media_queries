@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +18,7 @@
 			<div class="navigation-links">
 				<a href="index.html">About</a> <span class="link-separator">|</span>
 				<a href="portfolio.html">Portfolio</a> <span class="link-separator">|</span>
-				<a href="contact.html">Contact</a></li>
+				<a href="contact.html">Contact</a>
 			</div>
 		</div> 
 	</header>
@@ -29,18 +29,16 @@
 			<hr>
 			<form action="submit.php">
             <p>
-                Name<br>
-                <input type="text" name="name" placeholder="John Smith" class="singleLineInputBox">
+            	<label for="name">Full Name</label>
+                <input type="text" name="name" required placeholder="John Smith" class="singleLineInputBox" pattern="\S+ \S+.*" title="Please enter your first and last name.">
             </p>
             <p>
-                Email<br>
-                <input type="text" name="email" placeholder="example@gmail.com" class="singleLineInputBox">
+                <label for="email">Email</label>
+                <input type="email" name="email" required placeholder="example@gmail.com" class="singleLineInputBox" pattern="\S+@\S+\.[a-z]{2,3}$" title="Please enter a valid email address.">
             </p>
             <p>
-                Message<br>
-                <!-- <input type="text" name="message" class="multiLineInputBox"> -->
-                <!-- <textarea name="message" cols="40" rows="5"></textarea> -->
-                <textarea name="message" rows="5"></textarea>
+                <label for="message">Message</label>
+                <textarea name="message" required rows="10" pattern=".{25,}" title="Minimum message length is 25 characters, please. Thanks!" minlength=25></textarea>
             </p>
             <input type="submit">
         </form>

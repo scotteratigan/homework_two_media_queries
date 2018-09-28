@@ -1,6 +1,19 @@
 :root {
     --border-color: rgb(194, 194, 194);
     --main-color: rgb(74, 170, 165);
+    --alt-color: rgb(232, 155, 12);
+    --background-color: rgb(255, 255, 255);
+    --anchor-color: rgb(142, 142, 142);
+}
+
+a {
+	text-decoration: none;
+	color: var(--anchor-color);
+}
+
+a:hover {
+	text-shadow: 1px 1px var(--main-color);
+	text-decoration: underline;
 }
 
 body {
@@ -9,34 +22,71 @@ body {
 	background-size: 100% auto; /*100% x-axis (stretch), auto on y axis (tile)*/
 }
 
-header {
-	padding: 0 10%;
-	background: rgb(255, 255, 255);
-	position: relative;
-	border-bottom: 1px solid var(--border-color);
+footer {
+	background: rgb(102, 102, 102);
+	color: var(--background-color);
+	text-align: center;
+	padding: 2% 0 1% 0;
+	border-top: 2px solid var(--main-color);
 	position: fixed;
-	top: 0px;
-	left: 0px;
-	right: 0px;
-	z-index: 2;
-}
-
-a {
-	text-decoration: none;
-	color: rgb(142, 142, 142);
-}
-
-main {
-	background: rgb(255, 255, 255);
-	margin: 12% 10% 7.5% 10%;
-	padding: 3%;
-	font-size: .9rem;
-	border: 1px solid var(--border-color);
+	bottom: 0;
+	font-size: .8rem;
+	left: 0;
+	right: 0;
 }
 
 h1 {
 	font-size: 1.5rem;
 	color: var(--main-color);
+}
+
+header {
+	padding: 0 10%;
+	background: var(--background-color);
+	position: relative;
+	border-bottom: 1px solid var(--border-color);
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 2;
+}
+
+hr {
+	margin-bottom: 2.5%;
+}
+
+img {
+	border: 2px solid var(--background-color);
+}
+
+img:hover {
+	border: 2px solid var(--main-color);
+}
+
+input, textarea {
+	width: 100%;
+}
+
+input[type="submit"] {
+	padding: 10px 3px;
+	width: 150px;
+	border: 1px solid lightgrey;
+	background: var(--main-color);
+}
+
+input[type="submit"]:hover {
+	color: black;
+	background: var(--background-color);
+	border: 1px solid var(--main-color);
+}
+
+main {
+	background: var(--background-color);
+	margin: 12% 10% 7.5% 10%;
+	padding: 3%;
+	font-size: .9rem;
+	border: 1px solid var(--border-color);
 }
 
 p {
@@ -48,33 +98,18 @@ p:last-of-type {
 	padding-bottom: 0;
 }
 
-hr {
-	margin-bottom: 2.5%;
-}
-
-#bio-pic {
-	margin: 0rem .5rem .5rem 0rem;
+.bio-pic {
+	margin: 0 .5rem .5rem 0;
 	width: 134px;
 	height: 100px;
 	background-image: url(../images/me_with_wesley_xs.jpg);
 	/*background-repeat: no-repeat;*/
 	background-size: 100% 100%;
+	border: 2px solid var(--background-color);
 }
 
-/*.clearfix {
-	content: "";
-	clear: both;
-	display: table;
-}*/
-
-.logo {
-	color: rgb(255, 255, 255);
-	background: var(--main-color);
-	min-width: 20%;
-	padding: 3% 2%;
-	text-align: center;
-	font-size: 1.3rem;
-	white-space: nowrap;
+.bio-pic:hover {
+	border: 2px solid var(--main-color);
 }
 
 .flex-container {
@@ -87,6 +122,46 @@ hr {
 	position: relative;
 }
 
+.float-left {
+	float: left;
+}
+
+.link-separator {
+	color: rgb(142, 142, 142); /*fallback color if rgba isn't supported*/
+	color: rgba(142, 142, 142, .5);
+	padding: 0 .13rem;
+}
+
+.logo {
+	color: var(--background-color);
+	background: var(--main-color);
+	min-width: 20%;
+	padding: 3% 2%;
+	text-align: center;
+	font-size: 1.3rem;
+	white-space: nowrap;
+}
+
+.logo:hover {
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /*to outline text*/
+	color: var(--alt-color);
+}
+
+.navigation-links {
+	padding-top: 3.67%;
+	font-size: 1rem;
+}
+
+.portfolio-caption {
+	position: relative;
+	top: -60px;
+	text-align: center;
+	background: var(--main-color);
+	font-size: 2rem;
+	color: rgb(255, 255, 255, .85);
+	margin: 0 2px;
+}
+
 .portfolio-container {
 	flex-wrap: wrap;
 	justify-content: space-around;
@@ -97,54 +172,25 @@ hr {
 	margin: 3% 5px;
 }
 
-.portfolio-caption {
-	position: relative;
-	top: -60px;
-	text-align: center;
-	background: var(--main-color);
-	font-size: 2rem;
-	color: rgb(255, 255, 255, .85);
-	/*float: left;*/
-	/*background: blue;*/
-/*	left: 0px;
-	right: 0px;*/
-}
-
-.float-left {
-	float: left;
-}
-
-.navigation-links {
-	padding-top: 3.67%;
-	font-size: 1rem;
-}
-
-.link-separator {
-	color: rgba(142, 142, 142, .5);
-	padding: 0px .13rem;
-}
-
-footer {
-	background: rgb(102, 102, 102);
-	color: rgb(255, 255, 255);
-	text-align: center;
-	padding: 2% 0 1% 0;
-	border-top: 2px solid var(--main-color);
-	/*position: fixed;*/
-	bottom: 0;
-	font-size: .8rem;
-	/*left: 0px;
-	right: 0px;*/
-}
-
-/*h6 {
-	display: inline;
-}*/
-
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 576px) {
+@media all and (min-width: 576px) {
+	h1 {
+		font-size: 1.75rem;
+	}
+	main {
+		font-size: .9rem;
+	}
+	p {
+		line-height: 1.67rem;
+	}
+	.bio-pic {
+		margin: 0 .75rem .75rem 0;
+		width: 201px;
+		height: 150px;
+		background-image: url(../images/me_with_wesley_s.jpg);
+	}
 	.link-separator {
-		padding: 0px 1.2rem;
+		padding: 0 1.2rem;
 	}
 	.logo {
 		font-size: 1.45rem;
@@ -153,30 +199,30 @@ footer {
 		padding-top: 3.67%;
 		font-size: 1.1rem;
 	}
-	h1 {
-		font-size: 1.75rem;
-	}
-	#bio-pic {
-		margin: 0rem .75rem .75rem 0rem;
-		width: 201px;
-		height: 150px;
-		background-image: url(../images/me_with_wesley_s.jpg);
-	}
-	main {
-		font-size: .9rem;
-	}
-	p {
-		line-height: 1.67rem;
-	}
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media all and (min-width: 768px) {
+	h1 {
+		font-size: 2rem;
+	}
 	header {
 		border-bottom: 2px solid var(--border-color);
 	}
+	main {
+		font-size: 1rem;
+	}
+	p {
+		line-height: 1.75rem;
+	}
+	.bio-pic {
+		margin: 0 1rem 1rem 0;
+		width: 268px;
+		height: 200px;
+		background-image: url(../images/me_with_wesley_m.jpg);
+	}
 	.link-separator {
-		padding: 0px 2rem;
+		padding: 0 2rem;
 	}
 	.logo {
 		font-size: 1.6rem;
@@ -185,27 +231,27 @@ footer {
 		padding-top: 3.67%;
 		font-size: 1.2rem;
 	}
-	h1 {
-		font-size: 2rem;
-	}
-	#bio-pic {
-		margin: 0rem 1rem 1rem 0rem;
-		width: 268px;
-		height: 200px;
-		background-image: url(../images/me_with_wesley_m.jpg);
-	}
-	main {
-		font-size: 1rem;
-	}
-	p {
-		line-height: 1.75rem;
-	}
 } 
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+@media all and (min-width: 992px) {
+	h1 {
+		font-size: 2.25rem;
+	}
+	main {
+		font-size: 1.1rem;
+	}
+	p {
+		line-height: 2rem;
+	}
+	.bio-pic {
+		margin: 0 1.5rem 1.5rem 0;
+		width: 335px;
+		height: 250px;
+		background-image: url(../images/me_with_wesley_l.jpg);
+	}
 	.link-separator {
-		padding: 0px 2.5rem;
+		padding: 0 2.5rem;
 	}
 	.logo {
 		font-size: 1.8rem;
@@ -214,30 +260,30 @@ footer {
 		padding-top: 3.67%;
 		font-size: 1.3rem;
 	}
-	h1 {
-		font-size: 2.25rem;
-	}
-	#bio-pic {
-		margin: 0rem 1.5rem 1.5rem 0rem;
-		width: 335px;
-		height: 250px;
-		background-image: url(../images/me_with_wesley_l.jpg);
-	}
-	main {
-		font-size: 1.1rem;
-	}
-	p {
-		line-height: 2rem;
-	}
 } 
 
 /* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
+@media all and (min-width: 1200px) {
+	h1 {
+		font-size: 2.5rem;
+	}
 	header {
 		border-bottom: 3px solid var(--border-color);
 	}
+	main {
+		font-size: 1.2rem;
+	}
+	p {
+		line-height: 2.2rem;
+	}
+	.bio-pic {
+		margin: 0 2.25rem 2rem 0;
+		width: 402px;
+		height: 300px;
+		background-image: url(../images/me_with_wesley_xl.jpg);
+	}
 	.link-separator {
-		padding: 0px 3rem;
+		padding: 0 3rem;
 	}
 	.logo {
 		font-size: 2rem;
@@ -246,19 +292,36 @@ footer {
 		padding-top: 3.67%;
 		font-size: 1.4rem;
 	}
-	h1 {
-		font-size: 2.5rem;
-	}
-	#bio-pic {
-		margin: 0rem 2.25rem 2rem 0rem;
-		width: 402px;
-		height: 300px;
-		background-image: url(../images/me_with_wesley_xl.jpg);
-	}
+}
+
+/* Tall, narrow devices look better with a taller email message box and more top padding: */
+@media all and (min-height: 600px) and (max-width: 600px) {
 	main {
-		font-size: 1.2rem;
+		margin-top: 100px;
 	}
-	p {
-		line-height: 2.2rem;
+	textarea {
+		height: 200px;
 	}
 }
+
+@media all and (min-height: 700px) and (max-width: 600px) {
+	main {
+		margin-top: 125px;
+	}
+	textarea {
+		height: 300px;
+	}
+}
+
+@media all and (min-height: 800px) and (max-width: 600px) {
+	main {
+		margin-top: 150px;
+	}
+	textarea {
+		height: 350px;
+	}
+}
+
+/*Todo: consider using relative units for media queries rather than fixed screen sizes.
+This will allow a better experience when zooming in on content.
+http://bradfrost.com/blog/post/7-habits-of-highly-effective-media-queries/*/
