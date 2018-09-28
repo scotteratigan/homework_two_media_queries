@@ -20,6 +20,7 @@ body {
 	background: rgb(224, 234, 249);
 	background: url(../images/wooden.jpg) center;
 	background-size: 100% auto; /*100% x-axis (stretch), auto on y axis (tile)*/
+	font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
 }
 
 footer {
@@ -38,6 +39,7 @@ footer {
 h1 {
 	font-size: 1.5rem;
 	color: var(--main-color);
+	font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 header {
@@ -50,6 +52,7 @@ header {
 	left: 0;
 	right: 0;
 	z-index: 2;
+	font-family: 'Georgia', Times, Times New Roman, serif;
 }
 
 hr {
