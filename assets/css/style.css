@@ -303,29 +303,32 @@ p:last-of-type {
 
 /* Tall, narrow devices look better with a taller email message box and more top padding: */
 @media all and (min-height: 600px) and (max-width: 600px) {
-	main {
-		margin-top: 100px;
-	}
 	textarea {
-		height: 200px;
+		height: 175px;
 	}
 }
 
 @media all and (min-height: 700px) and (max-width: 600px) {
-	main {
-		margin-top: 125px;
-	}
 	textarea {
-		height: 300px;
+		height: 225px;
 	}
 }
 
 @media all and (min-height: 800px) and (max-width: 600px) {
 	main {
-		margin-top: 150px;
+		margin-top: 100px;
 	}
 	textarea {
-		height: 350px;
+		height: 275px;
+	}
+}
+
+@media all and (max-width: 475px){
+	a {
+		font-size: .75rem;
+	}
+	h1 {
+		font-size: 1rem;
 	}
 }
 
